@@ -92,5 +92,26 @@ namespace DS.Tests
 
             Assert.Same(test, node);
         }
+
+        [Fact]
+        public void DeleteNodeByValue()
+        {
+            var l = new SinglyLinkedList();
+            int[] arr = new int[] { 4, 5, 1, 9 };
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                l.Push(arr[i]);
+            }
+
+            var head = l.GetHead();
+            l.DisplayList(head);
+
+            Node toDelete = new Node { Value = 5 };
+            l.DeleteNodeByValue(head, toDelete);
+            l.DisplayList();
+
+            Assert.True(true);
+        }
     }
 }

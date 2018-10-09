@@ -123,4 +123,23 @@ public class SinglyLinkedList
         return prev;
     }
 
+    public void DeleteNodeByValue(Node head, Node node)
+    {
+        //node is node to delete
+        var current = head;
+        Node prev = null;
+        /*  1. Loop through the list and check if value matches
+            2. If value found, change previous Next to point to next.Next
+        */
+        while (current != null)
+        {
+            if (current.Value == node.Value)
+            {
+                prev.Next = current.Next;
+            }
+            prev = current;
+            current = current.Next;
+        }
+    }
+
 }
