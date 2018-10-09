@@ -8,7 +8,6 @@ public class Node
 
 public class SinglyLinkedList
 {
-    private Node first;
     private Node head;
 
     public bool IsEmpty()
@@ -16,26 +15,41 @@ public class SinglyLinkedList
         return head == null;
     }
 
-    public void Push(int val)
+    public Node Push(int val)
     {
         var n = new Node { Value = val, Next = null };
+        var current = head;
+
         if (head == null) head = n;
         else
         {
-            var current = head;
             while (current.Next != null)
             {
                 current = current.Next;
             }
             current.Next = n;
         }
+        return current;
     }
 
     public void DisplayList()
     {
+        System.Console.WriteLine("Displaying List");
         Node current = head;
         while (current != null)
         {
+            System.Console.WriteLine($"Value: {current.Value}, Next: {current.Next}");
+            current = current.Next;
+        }
+    }
+
+    public void DisplayList(Node n)
+    {
+        System.Console.WriteLine("Displaying List");
+        Node current = n;
+        while (current != null)
+        {
+            System.Console.WriteLine($"Value: {current.Value}, Next: {current.Next}");
             current = current.Next;
         }
     }
@@ -78,6 +92,35 @@ public class SinglyLinkedList
             counter++;
         }
         return middleNode;
+    }
+    /*Leetcode Reverse list 
+        Input: 1->2->3->4->5->NULL
+        Output: 5->4->3->2->1->NULL
+    */
+    public Node ReverseList(Node head)
+    {
+        /*
+            1. Create prev, current, and next
+            2. Start loop from head
+            3. Store next in current
+            4. Assign current.next to prev
+            5. Advance one node: prev = current, current = next
+         */
+        if (head == null || head.Next == null) return head;
+
+        Node prev = null;
+        var current = head;
+        Node next = null;
+
+        while (current != null)
+        {
+            next = current.Next;
+            current.Next = prev;
+            prev = current;
+            current = next;
+        }
+
+        return prev;
     }
 
 }
