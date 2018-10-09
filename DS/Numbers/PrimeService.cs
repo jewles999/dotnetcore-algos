@@ -18,7 +18,7 @@ namespace DS
                 }
             }
 
-            Console.WriteLine($"{num} is Prime? {result}");
+            //Console.WriteLine($"{num} is Prime? {result}");
             return result;
         }
     }
