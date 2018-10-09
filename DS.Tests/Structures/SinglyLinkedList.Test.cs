@@ -32,7 +32,6 @@ namespace DS.Tests
             {
                 l.Push(i);
             }
-            l.DisplayList();
 
             var count = l.GetListLength();
 
@@ -49,7 +48,6 @@ namespace DS.Tests
             for (int i = 1; i <= arr.Length; i++)
             {
                 l.Push(i);
-                l.DisplayList();
             }
 
             var middle = l.MiddleNode(l.GetHead());
@@ -67,12 +65,32 @@ namespace DS.Tests
             for (int i = 1; i <= arr.Length; i++)
             {
                 l.Push(i);
-                l.DisplayList();
             }
 
             var middle = l.MiddleNode(l.GetHead());
 
             Assert.Equal(4, middle.Value);
+        }
+
+        [Fact]
+        public void ReverseList_Iterative()
+        {
+            var l = new SinglyLinkedList();
+            int[] arr = new int[] { 1, 2, 3, 4, 5 };
+
+            for (int i = 1; i <= arr.Length; i++)
+            {
+                l.Push(i);
+            }
+
+            var node = l.GetHead();
+
+            var rev = l.ReverseList(l.GetHead());
+
+            //Reverse again to compare with the original
+            var test = l.ReverseList(rev);
+
+            Assert.Same(test, node);
         }
     }
 }
