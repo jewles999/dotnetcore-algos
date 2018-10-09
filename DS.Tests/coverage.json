@@ -1,0 +1,131 @@
+{
+  "/home/julia/algos/with-tests/DS.Tests/bin/Debug/netcoreapp2.1/DS.dll": {
+    "/home/julia/algos/with-tests/DS/Structures/SinglyLinkedList.cs": {
+      "Node": {
+        "System.Int32 Node::get_Value()": {
+          "Lines": {
+            "5": 3
+          },
+          "Branches": []
+        },
+        "Node Node::get_Next()": {
+          "Lines": {
+            "6": 6
+          },
+          "Branches": []
+        }
+      },
+      "SinglyLinkedList": {
+        "System.Boolean SinglyLinkedList::IsEmpty()": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 SinglyLinkedList::GetListLength(Node)": {
+          "Lines": {
+            "18": 1,
+            "19": 1,
+            "21": 4,
+            "22": 3,
+            "23": 3,
+            "24": 3,
+            "25": 3,
+            "26": 1,
+            "27": 1
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 25,
+              "EndOffset": 5,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 21,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/home/julia/algos/with-tests/DS/Numbers/PrimeService.cs": {
+      "DS.PrimeService": {
+        "System.Boolean DS.PrimeService::IsPrime(System.Int32)": {
+          "Lines": {
+            "8": 17,
+            "9": 17,
+            "10": 20,
+            "12": 63514,
+            "13": 31749,
+            "14": 31749,
+            "15": 6,
+            "16": 6,
+            "17": 6,
+            "19": 31743,
+            "22": 14,
+            "23": 17
+          },
+          "Branches": [
+            {
+              "Line": 10,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 10,
+              "Offset": 12,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 14
+            },
+            {
+              "Line": 12,
+              "Offset": 58,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 31749
+            },
+            {
+              "Line": 14,
+              "Offset": 33,
+              "EndOffset": 35,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 6
+            },
+            {
+              "Line": 14,
+              "Offset": 33,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 31743
+            },
+            {
+              "Line": 12,
+              "Offset": 58,
+              "EndOffset": 60,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 14
+            }
+          ]
+        }
+      }
+    }
+  }
+}
