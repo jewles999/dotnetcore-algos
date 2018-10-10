@@ -106,11 +106,9 @@ namespace DS.Tests
             }
 
             var head = l.GetHead();
-            l.DisplayList(head);
 
             Node toDelete = new Node { Value = 5 };
             l.DeleteNodeByValue(head, toDelete);
-            l.DisplayList();
 
             Assert.True(true);
         }
