@@ -18,6 +18,26 @@ namespace DS.Tests
 
             Assert.Equal(12, maxSum);
         }
+
+        [Fact]
+        public void SmallestNotExisting_InArray()
+        {
+            int[] arr = new int[] { 1, 3, 6, 4, 1, 2 };
+            ArrayService ars = new ArrayService();
+            int sm = ars.SmallestNotIn(arr);
+
+            Assert.Equal(5, sm);
+        }
+
+        [Fact]
+        public void SmallestNotExisting_NotInArray()
+        {
+            int[] arr = new int[] { 1, 2, 3 };
+            ArrayService ars = new ArrayService();
+            int sm = ars.SmallestNotIn(arr);
+
+            Assert.Equal(4, sm);
+        }
     }
 
 }

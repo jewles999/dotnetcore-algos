@@ -1,3 +1,4 @@
+using System;
 public class ArrayService
 {
     public int MaxSubarraySum(int[] arr, int maxNum)
@@ -23,5 +24,40 @@ public class ArrayService
             if (tempSum > maxSum) maxSum = tempSum;
         }
         return maxSum;
+    }
+
+    public int SmallestNotIn(int[] A)
+    {
+        /*Codility: class Solution { public int solution(int[] A); }
+            that, given an array A of N integers, returns the smallest positive integer (greater than 0) that does not occur in A.
+            For example, given A = [1, 3, 6, 4, 1, 2], the function should return 5.
+            Given A = [1, 2, 3], the function should return 4.
+            Given A = [−1, −3], the function should return 1.
+            Write an efficient algorithm for the following assumptions:
+            N is an integer within the range [1..100,000];
+            each element of array A is an integer within the range [−1,000,000..1,000,000].
+        */
+        Array.Sort(A);
+        int res = -1;
+        //difference between current number and next number that is not 
+        //the same should be > 1
+        for (int i = 0; i < A.Length; i++)
+        {
+            if ((i + 1) < A.Length && A[i] != A[i + 1])
+            {
+                int diff = A[i + 1] - A[i];
+                if (diff > 1)
+                {
+                    res = A[i] + 1;
+                }
+            }
+        }
+        if (res < 0)
+        {
+            //not found
+            if (A[A.Length - 1] < 0) res = 1;
+
+        }
+        return res < 0 ? A[A.Length - 1] + 1 : res;
     }
 }
